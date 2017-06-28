@@ -1,0 +1,126 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.all {
+	margin: 0 auto;
+	width: 675px;
+}
+
+h1 {
+	margin-top: 18px;
+	margin-right: 13px;
+	font-family: "VT323", serif;
+	font-size: 60px;
+	float: right;
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+	letter-spacing: -17px;
+}
+
+button {
+	margin: 1px;
+	float: right;
+	height: 45px;
+	border: 2px solid #333;
+	border-radius: 3px;
+	font-family: 'courier', serif;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#options, #gradients, #colors {
+	margin: 10px 0;
+}
+
+#options button {
+	width: 58px;
+	margin-top: 5px;
+	margin-bottom: 20px;
+}
+
+#gradients button {
+	width: 38px;
+	margin-bottom: 20px;
+}
+
+#colors button{
+	width: 118px;
+}
+
+#black {
+	background-color: #222;
+}
+
+#grey {
+	background-color: #aaa;
+}
+
+#white {
+	background-color: #fff;
+}
+
+#red {
+	background-color: red;
+}
+
+#p {
+	color: red;
+}
+
+#orange {
+	background-color: orange;
+}
+
+#i {
+	color: orange;
+}
+
+#yellow {
+	background-color: yellow;
+}
+
+#x {
+	color: yellow;
+}
+
+#green {
+	background-color: #2fdb2f;
+}
+
+#e {
+	color: #2fdb2f;
+}
+
+#blue {
+	background-color: #0093ff;
+}
+
+#l {
+	color: #0093ff;
+}
+
+#purple {
+	background-color: #9d2eef;
+	margin-bottom: 20px;
+}
+
+#s {
+	color: #9d2eef;
+}
+
+#rainbow {
+	width: 118px;
+	background: url("../images/rainbow.jpeg") no-repeat scroll 0 0 transparent;
+}
+
+.box {
+	margin: 26px 0;
+	border: 2px solid black;
+	border-radius: 10px;
+	height: 550px;
+	width: 550px;
+	float: left;
+}
+
+ 
