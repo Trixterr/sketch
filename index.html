@@ -4,37 +4,30 @@
 		<title>Pixel Sketch</title>
 		<meta charset = "utf-8">
 		<link href="styles/style.css" rel="stylesheet" type="text/css">
-		<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet"> 
+		  <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" rel="stylesheet"> 
 	</head>
 	<body>
-		<div class="all">
-			<h1><span id="p">p</span>
-				<span id="i">i</span>
-				<span id="x">x</span>
-				<span id="e">e</span>
-				<span id="l">l</span>
-				<span id="s">s</span></h1>
-			<div class="box"></div>
-			<span id="options">
-				<button>scale</button>
-				<button>clear</button>
-			</span>
-			<span id="gradients">
-				<button id="black"></button>
-				<button id="grey"></button>
-				<button id="white"></button>
-			</span>
-			<div id="colors">
-				<button id="red"></button>
-				<button id="orange"></button>
-				<button id="yellow"></button>
-				<button id="green"></button>
-				<button id="blue"></button>
-				<button id="purple"></button>
-			</div>
-			<div>
-				<button id="rainbow"></button>
-			</div>
+		<div class="main">
+			<div class="border"></div>
+			<div class="board"></div>
 		</div>
+		<!--<div class="options">
+			<button class="scale">scale</button>
+			<button class="clear">clear</button>
+		</div>-->
+		<div class="tools">
+			<button class="scale">scale</button>
+			<button class="clear">clear</button>
+			<button class="erase"></button>
+			<button class="draw"></button>
+			<button class="eraselabel">erase</button>
+			<button class="drawlabel">draw</button>
+		</div>
+		<!--<div class="labels">
+			<button class="eraselabel">erase</button>
+			<button class="drawlabel">draw</button>
+		</div>-->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="scripts/script.js"></script>
 	</body>
 </html>
