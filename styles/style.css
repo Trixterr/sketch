@@ -37,11 +37,8 @@ table {
 }
 
 td {
-	border: 1px solid black	;
-}
-
-.options {
-	transform: rotate(-90deg);
+	border-bottom: 1px solid #095711;
+	border-right: 1px solid #095711;
 }
 
 .scale, .clear{
@@ -120,4 +117,10 @@ td {
 
 .appear {
 	display: block;
+}
+
+.whitechalk {
+	background-color: #fafafa;
+	border-bottom: 1px solid #f0f0f0;
+	border-right: 1px solid #eee;
 }
