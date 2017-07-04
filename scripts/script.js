@@ -1,5 +1,5 @@
 var gridSize = 20;
-var drawOn = true;
+var drawOn = "white";
 
 function createGrid(num) {
 	$(".board").append('<table></table>');
@@ -29,23 +29,37 @@ function changeGrid() {
 
 
 function drawCheck() {
-	if (drawOn) {
+	if (drawOn === "white") {
 		$("td").on("mouseenter", function(){
 			$(this).addClass("whitechalk");
 		});
+	} else if (drawOn === "red") {
+		$("td").on("mouseenter", function(){
+			$(this).addClass("redchalk");
+		});
 	} else {
 		$("td").on("mouseenter", function(){
-			$(this).removeClass("whitechalk");
+			$(this).removeClass();
 		});
 	}
 }
 
-function drawTrue() {
-	drawOn = true;
+function drawRed() {
+	drawOn = "red";
+}
+
+function drawWhite() {
+	drawOn = "white";
 }
 
 function drawFalse() {
 	drawOn = false;
+}
+
+function drawClear() {
+	$("td").on("mouseenter", function(){
+		$(this).removeClass();
+	});
 }
 
 
@@ -61,12 +75,19 @@ $(document).ready(function(){
 	});
 
 	$(".clear").on("click", function(){
-		$("td").removeClass("whitechalk");
+		$("td").removeClass();
 		drawCheck();
 	});
 
-	$(".draw").on("click", function(){
-		drawTrue();
+	$(".drawwhite").on("click", function(){
+		drawClear();
+		drawWhite();
+		drawCheck();
+	});
+
+	$(".drawred").on("click", function(){
+		drawClear()
+		drawRed();
 		drawCheck();
 	});
 
@@ -86,12 +107,20 @@ $(document).ready(function(){
 		$(".eraselabel").removeClass("appear");
 	});
 
-	$(".draw").hover(
+	$(".drawwhite").hover(
 	function() {
-		$(".drawlabel").addClass("appear");
+		$(".drawwhitelabel").addClass("appear");
 	}, 
 	function() {
-		$(".drawlabel").removeClass("appear");
+		$(".drawwhitelabel").removeClass("appear");
+	});
+
+	$(".drawred").hover(
+	function() {
+		$(".drawredlabel").addClass("appear");
+	}, 
+	function() {
+		$(".drawredlabel").removeClass("appear");
 	});
 
 	$(".scale").hover(

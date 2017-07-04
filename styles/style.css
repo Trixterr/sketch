@@ -64,10 +64,23 @@ td {
 	margin: 0 0 0 10px;
 }
 
-.draw {
+.drawwhite {
 	background-color: #fafafa;
 	border: 1px solid #ddd;
 	border-bottom: 5px solid #bbb;
+	border-radius: 3px;
+	box-shadow: 0 1px 3px black;
+	margin: 558px 5px 0 0;
+	float: right;
+	width: 55px;
+	height: 11px;
+	position: sticky;
+}
+
+.drawred {
+	background-color: #f64a4a;
+	border: 1px solid #e73434;
+	border-bottom: 5px solid #f22c2c;
 	border-radius: 3px;
 	box-shadow: 0 1px 3px black;
 	margin: 558px 5px 0 0;
@@ -90,19 +103,26 @@ td {
 	margin: 541px 26px 0 0;
 }
 
-.drawlabel, .eraselabel{
+.drawredlabel, .drawwhitelabel, .eraselabel{
 	font-family: "shadows into light two", sans-serif;
 	font-size: 18px;
 	font-weight: bold;
 	text-shadow: 1px 0 black, 0 1px black, -1px 0 black, 0 -1px black;
+	color: #fff;
 	background-color: transparent;
 	border: none;
 }
 
-.drawlabel {
+.drawredlabel {
+	margin: -31px 0 0 382px;
+	position: absolute;
+	float: right;
+	display: none;
+}
+
+.drawwhitelabel {
 	margin: -31px 0 0 436px;
 	position: absolute;
-	color: #fff;
 	float: right;
 	display: none;
 }
@@ -110,7 +130,6 @@ td {
 .eraselabel {
 	margin: -31px 0px 0 500px;
 	position: absolute;
-	color: #fff;
 	float: right;
 	display: none;
 }
@@ -121,6 +140,12 @@ td {
 
 .whitechalk {
 	background-color: #fafafa;
-	border-bottom: 1px solid #f0f0f0;
+	border-bottom: 1px solid #eee;
 	border-right: 1px solid #eee;
+}
+
+.redchalk {
+	background-color: #f64a4a;
+	border-bottom: 1px solid #f22c2c;
+	border-right: 1px solid #f22c2c;
 }

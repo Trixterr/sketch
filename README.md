@@ -6,5 +6,11 @@ From The Odin Project's [curriculum](https://www.theodinproject.com/courses/web-
 - [x] Make a div creating script for pad
 - [x] Create functional tools 
 - [] Add more colors
+-- [x] Red
+-- [] Orange
+-- [] Yellow
+-- [] Green 
+-- [] Blue 
+-- [] Purple
 - [] Replace scale button with jQuery UI slider
 - [] Do it all with a kitty on lap <3 
