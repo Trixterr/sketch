@@ -1,9 +1,9 @@
-/**/
-
 body {
 	margin: 0;
 	padding: 0;
-	background-color: #a8a9db;
+	background-image: url("../images/turtle.gif");
+	background-position: right bottom;
+	background-repeat: no-repeat;
 }
 
 .main, .tools {
@@ -15,7 +15,7 @@ body {
 	margin: 12px 10px;
 	border: 33px solid #8c4f13;
 	border-radius: 20px;
-	box-shadow: 4px 4px 3px #3f6675;
+	box-shadow: 4px 4px 3px #111;
 	height: 525px;
 	width: 525px;
 	position: absolute;
@@ -25,7 +25,7 @@ body {
 	margin: 45px 0 0 43px;
 	width: 525px;
 	height: 525px;
-	background-color: #085010;
+	background-color: #032A07;
 	box-shadow: -3px -3px 10px #332912, 3px 3px 10px #b08f1e;
 	position: absolute;
 }
@@ -37,12 +37,12 @@ table {
 }
 
 td {
-	border-bottom: 1px solid #095711;
-	border-right: 1px solid #095711;
+	border-bottom: 1px solid #08350C;
+	border-right: 1px solid #08350C;
 }
 
-.scale, .clear{
-	position: sticky;
+.scale, .clear {
+	position: absolute;
 	font-family: "shadows into light two", sans-serif;
 	font-size: 20px;
 	font-weight: bold;
@@ -50,102 +50,185 @@ td {
 	text-shadow: 1px 0 #B77928, 0 1px #B77E33, -1px 0 #2A1111, 0 -1px #2A1111;
 	background-color: transparent;
 	border: none;
-}
-
-.darker {
-	color: #361E00;;
+	float: right;
 }
 
 .scale {
-	margin: 572px 0 0 40px;
+	margin: 13px 0 0 35px;
 }
 
 .clear {
-	margin: 0 0 0 10px;
+	margin: 13px 0 0 100px;
 }
 
-.drawwhite {
-	background-color: #fafafa;
-	border: 1px solid #ddd;
-	border-bottom: 5px solid #bbb;
+/*----------------------------------------------------ACTIVE COLOR--*/
+
+span {
+	position: absolute;
+	margin: 573px 0 0 10px;
+	width: 591px;
+	font-family: "shadows into light two", sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 1px 0 #B77928, 0 1px #B77E33, -1px 0 #2A1111, 0 -1px #2A1111;
+}
+
+.activerainbow {
+	color: ;
+}
+
+.activered {
+	color: #f64a4a;
+}
+
+.activeorange {
+	color: #ffb225;
+}
+
+.activeyellow {
+	color: #ffff5c;
+}
+
+.activegreen {
+	color: #5eff5e;
+}
+
+.activeblue {
+	color: #41d0ff;
+}
+
+.activepurple {
+	color: #d26bff;
+}
+
+.activewhite {
+	color: #fafafa;
+}
+
+.activeeraser {
+	color: #4A2A03;
+	text-shadow: 1px 0 #B77928, 0 1px #B77E33, -1px 0 #2A1111, 0 -1px #2A1111;
+}
+
+/*----------------------------------------------------COLOR TOOLS--*/
+
+.drawrainbow, .drawred, .draworange, .drawyellow, .drawgreen, .drawblue, .drawpurple, .drawwhite {
 	border-radius: 3px;
 	box-shadow: 0 1px 3px black;
-	margin: 558px 5px 0 0;
+	margin: 560px 2px 0 0;
 	float: right;
 	width: 55px;
 	height: 11px;
 	position: sticky;
+}
+
+.drawrainbow {
+	background-image: url("../images/rainbowchalk.jpeg");
+	background-size: 55px 11px;
+	border: 1px solid transparent;
 }
 
 .drawred {
 	background-color: #f64a4a;
 	border: 1px solid #e73434;
 	border-bottom: 5px solid #f22c2c;
-	border-radius: 3px;
-	box-shadow: 0 1px 3px black;
-	margin: 558px 5px 0 0;
-	float: right;
-	width: 55px;
-	height: 11px;
-	position: sticky;
+}
+
+.draworange {
+	background-color: #ffb225;
+	border: 1px solid #e7a938;
+	border-bottom: 5px solid #f90;
+}
+
+.drawyellow {
+	background-color: #ffff5c;;
+	border: 1px solid #ffff20;
+	border-bottom: 5px solid #e1e100;
+}
+
+.drawgreen {
+	background-color: #5eff5e;
+	border: 1px solid #28bf28;
+	border-bottom: 5px solid #00d200;
+}
+
+.drawblue {
+	background-color: #41d0ff;
+	border: 1px solid #29b6bc;
+	border-bottom: 5px solid #0097d2;
+}
+
+.drawpurple {
+	background-color: #d26bff;
+	border: 1px solid #b60eff;
+	border-bottom: 5px solid #ad44db;
+}
+
+.drawwhite {
+	background-color: #fafafa;
+	border: 1px solid #ddd;
+	border-bottom: 5px solid #bbb;
 }
 
 .erase {
-	background-color: #b91111;
-	border: 1px solid #b45252;
-	border-bottom: 10px solid #8c1818;
+	background-color: #B77E33;
+	border: 1px solid #4A2A03;
+	border-bottom: 10px solid #936328;
 	border-radius: 3px;
 	box-shadow: 0 10px 3px black;
 	float: right;
 	width: 70px;
 	height: 20px;
 	position: sticky;
-	margin: 541px 26px 0 0;
+	margin: 543px 22px 0 0;
 }
 
-.drawredlabel, .drawwhitelabel, .eraselabel{
-	font-family: "shadows into light two", sans-serif;
-	font-size: 18px;
-	font-weight: bold;
-	text-shadow: 1px 0 black, 0 1px black, -1px 0 black, 0 -1px black;
-	color: #fff;
-	background-color: transparent;
-	border: none;
-}
+/*--------------------------------------------JAVASCRIPT CLASSES--*/
 
-.drawredlabel {
-	margin: -31px 0 0 382px;
-	position: absolute;
-	float: right;
-	display: none;
-}
 
-.drawwhitelabel {
-	margin: -31px 0 0 436px;
-	position: absolute;
-	float: right;
-	display: none;
-}
-
-.eraselabel {
-	margin: -31px 0px 0 500px;
-	position: absolute;
-	float: right;
-	display: none;
-}
-
-.appear {
-	display: block;
-}
-
-.whitechalk {
-	background-color: #fafafa;
-	border-bottom: 1px solid #eee;
-	border-right: 1px solid #eee;
+.darker {
+	color: #361E00;;
 }
 
 .redchalk {
 	background-color: #f64a4a;
-	border-bottom: 1px solid #f22c2c;
 	border-right: 1px solid #f22c2c;
+	border-bottom: 1px solid #f22c2c;
+}
+
+.orangechalk {
+	background-color: #ffb225;
+	border-right: 1px solid #f90;
+	border-bottom: 1px solid #f90;
+}
+
+.yellowchalk {
+	background-color: #ffff5c;
+	border-right: 1px solid #e1e100;
+	border-bottom: 1px solid #e1e100;
+}
+
+.greenchalk {
+	background-color: #5eff5e;
+	border-right: 1px solid #28bf28;
+	border-bottom: 1px solid #28bf28;
+}
+
+.bluechalk {
+	background-color: #41d0ff;
+	border-right: 1px solid #29b6bc;
+	border-bottom: 1px solid #29b6bc;
+}
+
+.purplechalk {
+	background-color: #d26bff;
+	border-right: 1px solid #ad44db;
+	border-bottom: 1px solid #ad44db;
+}
+
+.whitechalk {
+	background-color: #fafafa;
+	border-right: 1px solid #eaeaea;
+	border-bottom: 1px solid #eaeaea;
 }
