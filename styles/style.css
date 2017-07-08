@@ -1,3 +1,11 @@
+* {
+	color: #4A2A03;
+	font-family: "shadows into light two", sans-serif;
+	font-size: 19px;
+	font-weight: 600;
+	text-shadow: 1px 0 #B77928, 0 1px #B77E33, -1px 0 #2A1111, 0 -1px #2A1111;
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -6,76 +14,179 @@ body {
 	background-repeat: no-repeat;
 }
 
-.main, .tools {
+.top, .slider, .tools, .active, span {
 	margin: 0 auto;
-	width: 591px;
+	width: 540px;
 }
 
-.border {
+/*--------------------------------------------------------MAIN--*/
+
+.main {
+	margin: 0 auto;
+	width: 614px;
+}
+
+#border, #board, table {
+	width: 525px;
+	height: 525px;
+	position: absolute;
+}
+
+#border {
 	margin: 12px 10px;
 	border: 33px solid #8c4f13;
 	border-radius: 20px;
 	box-shadow: 4px 4px 3px #111;
-	height: 525px;
-	width: 525px;
-	position: absolute;
 }
 
-.board {
+#board {
 	margin: 45px 0 0 43px;
-	width: 525px;
-	height: 525px;
 	background-color: #032A07;
 	box-shadow: -3px -3px 10px #332912, 3px 3px 10px #b08f1e;
-	position: absolute;
 }
 
 table {
-	width: 525px;
-	height: 525px;
 	border-spacing: 0;
 }
 
 td {
-	border-bottom: 1px solid #08350C;
 	border-right: 1px solid #08350C;
+	border-bottom: 1px solid #08350C;
 }
 
-.scale, .clear {
-	position: absolute;
-	font-family: "shadows into light two", sans-serif;
-	font-size: 20px;
-	font-weight: bold;
-	color: #4A2A03;
-	text-shadow: 1px 0 #B77928, 0 1px #B77E33, -1px 0 #2A1111, 0 -1px #2A1111;
+/*------------------------------------------------------------TOP--*/
+.top {
+	height: 45px;
+}
+
+#scale, #clear {
+	margin-top: 14px;
+	position: sticky;
 	background-color: transparent;
 	border: none;
+}
+
+#clear {
 	float: right;
 }
 
-.scale {
-	margin: 13px 0 0 35px;
+/*---------------------------------------------------------SLIDER--*/
+
+#scaleSlider {
+	margin: 28px 0 0 7px;
+	height: 3px;
+	width: 462px;
+	background-color: #4A2A03;
+	border: none;
+	box-shadow: 1px 0 #B77928, 0 1px #B77E33, -1px 0 #2A1111, 0 -1px #2A1111;
+	position: absolute;
 }
 
-.clear {
-	margin: 13px 0 0 100px;
+#scaleHandle {
+	width: 1.5em;
+	top: 50%;
+	margin-top: -.7em;
+	text-align: center;
+	line-height: 1.3em;
+	color: #4A2A03;
+	background-color: #814a14;
+	border: 1px solid #452904;
+	box-shadow: 1px 0 #2A1111, 0 1px #2A1111, -1px 0 #2A1111, 0 -1px #2A1111;
+	font-size: 18px;
+	font-family: "architects daughter", sans-serif;
+	font-weight: 500;
 }
 
-/*----------------------------------------------------ACTIVE COLOR--*/
+/*----------------------------------------------------------TOOLS--*/
+
+.tools {
+	margin-top: 499px;
+}
+
+#drawrainbow, #drawred, #draworange, #drawyellow, #drawgreen, #drawblue, #drawpurple, #drawwhite {
+	border-radius: 3px;
+	box-shadow: 0 1px 3px black;
+	margin: 17px 2px 0 0;
+	float: right;
+	width: 55px;
+	height: 11px;
+	position: sticky;
+}
+
+#drawrainbow {
+	background: linear-gradient(to right, #f22c2c, #f90, #e1e100, #00d200, #0097d2, #ad44db, #ff7eeb);
+	border: 1px solid #555;
+	border-bottom: 5px solid rgba(41, 41, 41, 0.3);
+}
+
+#drawred {
+	background-color: #f64a4a;
+	border: 1px solid #e73434;
+	border-bottom: 5px solid #f22c2c;
+}
+
+#draworange {
+	background-color: #ffb225;
+	border: 1px solid #e7a938;
+	border-bottom: 5px solid #f90;
+}
+
+#drawyellow {
+	background-color: #ffff5c;
+	border: 1px solid #ffff20;
+	border-bottom: 5px solid #e1e100;
+}
+
+#drawgreen {
+	background-color: #5eff5e;
+	border: 1px solid #28bf28;
+	border-bottom: 5px solid #00d200;
+}
+
+#drawblue {
+	background-color: #41d0ff;
+	border: 1px solid #29b6bc;
+	border-bottom: 5px solid #0097d2;
+}
+
+#drawpurple {
+	background-color: #d26bff;
+	border: 1px solid #b60eff;
+	border-bottom: 5px solid #ad44db;
+}
+
+#drawwhite {
+	background-color: #fafafa;
+	border: 1px solid #ddd;
+	border-bottom: 5px solid #bbb;
+}
+
+#erase {
+	margin-right: 8px;
+	background-color: #B77E33;
+	border: 1px solid #4A2A03;
+	border-bottom: 10px solid #936328;
+	border-radius: 3px;
+	box-shadow: 0 10px 3px black;
+	float: right;
+	width: 70px;
+	height: 20px;
+	position: sticky;
+}
+
+/*---------------------------------------------------------ACTIVE--*/
+
+.active {
+	margin-top: 527px;
+}
 
 span {
 	position: absolute;
-	margin: 573px 0 0 10px;
-	width: 591px;
-	font-family: "shadows into light two", sans-serif;
-	font-size: 20px;
-	font-weight: bold;
 	text-align: center;
-	text-shadow: 1px 0 #B77928, 0 1px #B77E33, -1px 0 #2A1111, 0 -1px #2A1111;
 }
 
 .activerainbow {
-	color: ;
+	
 }
 
 .activered {
@@ -108,87 +219,12 @@ span {
 
 .activeeraser {
 	color: #4A2A03;
-	text-shadow: 1px 0 #B77928, 0 1px #B77E33, -1px 0 #2A1111, 0 -1px #2A1111;
 }
 
-/*----------------------------------------------------COLOR TOOLS--*/
+/*---------------------------------------------JAVASCRIPT CLASSES--*/
 
-.drawrainbow, .drawred, .draworange, .drawyellow, .drawgreen, .drawblue, .drawpurple, .drawwhite {
-	border-radius: 3px;
-	box-shadow: 0 1px 3px black;
-	margin: 560px 2px 0 0;
-	float: right;
-	width: 55px;
-	height: 11px;
-	position: sticky;
-}
-
-.drawrainbow {
-	background-image: url("../images/rainbowchalk.jpeg");
-	background-size: 55px 11px;
-	border: 1px solid transparent;
-}
-
-.drawred {
-	background-color: #f64a4a;
-	border: 1px solid #e73434;
-	border-bottom: 5px solid #f22c2c;
-}
-
-.draworange {
-	background-color: #ffb225;
-	border: 1px solid #e7a938;
-	border-bottom: 5px solid #f90;
-}
-
-.drawyellow {
-	background-color: #ffff5c;;
-	border: 1px solid #ffff20;
-	border-bottom: 5px solid #e1e100;
-}
-
-.drawgreen {
-	background-color: #5eff5e;
-	border: 1px solid #28bf28;
-	border-bottom: 5px solid #00d200;
-}
-
-.drawblue {
-	background-color: #41d0ff;
-	border: 1px solid #29b6bc;
-	border-bottom: 5px solid #0097d2;
-}
-
-.drawpurple {
-	background-color: #d26bff;
-	border: 1px solid #b60eff;
-	border-bottom: 5px solid #ad44db;
-}
-
-.drawwhite {
-	background-color: #fafafa;
-	border: 1px solid #ddd;
-	border-bottom: 5px solid #bbb;
-}
-
-.erase {
-	background-color: #B77E33;
-	border: 1px solid #4A2A03;
-	border-bottom: 10px solid #936328;
-	border-radius: 3px;
-	box-shadow: 0 10px 3px black;
-	float: right;
-	width: 70px;
-	height: 20px;
-	position: sticky;
-	margin: 543px 22px 0 0;
-}
-
-/*--------------------------------------------JAVASCRIPT CLASSES--*/
-
-
-.darker {
-	color: #361E00;;
+.dark {
+	color: #140B00;
 }
 
 .redchalk {
@@ -231,4 +267,14 @@ span {
 	background-color: #fafafa;
 	border-right: 1px solid #eaeaea;
 	border-bottom: 1px solid #eaeaea;
+}
+
+/*----------------------------------------------------------IT ME--*/
+
+.me p {
+	margin: -1px 100px 0 0;
+	font-size: 15px;
+	color: #aaa;
+	text-shadow: none;
+	float: right;
 }

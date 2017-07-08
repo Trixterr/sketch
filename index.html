@@ -3,32 +3,42 @@
 	<head>
 		<title>Chalkboard Sketch</title>
 		<meta charset = "utf-8">
+		<link href="styles/jquery-ui.css" rel="stylesheet" type="text/css">
 		<link href="styles/style.css" rel="stylesheet" type="text/css">
-		  <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet"> 
 	</head>
 	<body>
 		<div class="main">
-			<div class="border"></div>
-			<div class="board"></div>
+			<div id="border"></div>
+			<div id="board"></div>
+		</div>
+		<div class="top">
+			<div id="scaleSlider">
+				<div id="scaleHandle" class="ui-slider-handle"></div>
+			</div>
+			<button id="clear">clear</button>
 		</div>
 		<div class="tools">
-			<button class="scale">scale</button>
-			<button class="clear">clear</button>
+			<button id="erase"></button>
 
-			<button class="erase"></button>
-
-			<button class="drawwhite"></button>
-			<button class="drawpurple"></button>
-			<button class="drawblue"></button>
-			<button class="drawgreen"></button>
-			<button class="drawyellow"></button>
-			<button class="draworange"></button>
-			<button class="drawred"></button>
-			<button class="drawrainbow"></button>
-
+			<button id="drawwhite"></button>
+			<button id="drawpurple"></button>
+			<button id="drawblue"></button>
+			<button id="drawgreen"></button>
+			<button id="drawyellow"></button>
+			<button id="draworange"></button>
+			<button id="drawred"></button>
+			<button id="drawrainbow"></button>
+		</div>
+		<div class="active">
 			<span></span>
 		</div>
-		<script src="scripts/jquery-3.2.1-min.js"></script>
+		<div class="me">
+			<p>github.com/trixterr</p>
+		</div>
+		<script src="scripts/jquery.min.js"></script>
+		<script src="scripts/jquery-ui.min.js"></script>
 		<script src="scripts/script.js"></script>
 	</body>
 </html>
