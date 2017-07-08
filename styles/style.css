@@ -14,7 +14,7 @@ body {
 	background-repeat: no-repeat;
 }
 
-.top, .slider, .tools, .active, span {
+.top, .empty, .tools, .active, span {
 	margin: 0 auto;
 	width: 540px;
 }
@@ -59,16 +59,14 @@ td {
 	height: 45px;
 }
 
-#scale, #clear {
+#clear {
 	margin-top: 14px;
 	position: sticky;
 	background-color: transparent;
 	border: none;
-}
-
-#clear {
 	float: right;
 }
+
 
 /*---------------------------------------------------------SLIDER--*/
 
@@ -97,10 +95,14 @@ td {
 	font-weight: 500;
 }
 
+.empty {
+	height: 499px;
+}
+
 /*----------------------------------------------------------TOOLS--*/
 
 .tools {
-	margin-top: 499px;
+	height: 30px;
 }
 
 #drawrainbow, #drawred, #draworange, #drawyellow, #drawgreen, #drawblue, #drawpurple, #drawwhite {
@@ -177,7 +179,7 @@ td {
 /*---------------------------------------------------------ACTIVE--*/
 
 .active {
-	margin-top: 527px;
+	height: 30px;
 }
 
 span {
@@ -272,7 +274,7 @@ span {
 /*----------------------------------------------------------IT ME--*/
 
 .me p {
-	margin: -1px 100px 0 0;
+	margin: -25px 100px 0 0;
 	font-size: 15px;
 	color: #aaa;
 	text-shadow: none;
