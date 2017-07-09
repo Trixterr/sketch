@@ -55,6 +55,7 @@ td {
 }
 
 /*------------------------------------------------------------TOP--*/
+
 .top {
 	height: 45px;
 }
@@ -227,6 +228,11 @@ span {
 
 .dark {
 	color: #140B00;
+}
+
+.rainbowchalk {
+	border-right: 1px solid rgba(0, 0, 0, 0.50);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.50);
 }
 
 .redchalk {

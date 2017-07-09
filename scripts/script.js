@@ -118,7 +118,9 @@ function drawCheck() {
 			break;
 
 		case "rainbow":
-			//-ADD RAINBOW CHALK ON MOUSEENTER
+			$("td").on("mouseenter", function(){
+				$(this).css("background-color", rainbow());
+			});
 			$("span").removeClass();
 			$("span").html("rainbow");
 			$("span").addClass("activerainbow");
@@ -132,6 +134,17 @@ function drawCheck() {
 			$("span").html("eraser");
 			$("span").addClass("activeeraser");
 	}
+}
+
+//----------------------------------------RANDOM COLOR GENERATOR
+
+function rainbow(){
+	var randomR = Math.floor(Math.random()*255);
+	var randomG = Math.floor(Math.random()*255);
+	var randomB = Math.floor(Math.random()*255);
+	var randomA = Math.round(Math.random() * 100) / 100;
+
+	return("rgba("+randomR+", "+randomG+", "+randomB+", "+randomA+")");
 }
 
 //----------------------------------------------------DRAW CLEAR
