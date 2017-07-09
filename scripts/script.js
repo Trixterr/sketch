@@ -15,20 +15,6 @@ function createGrid(num) {
 	}
 }
 
-
-/*function changeGrid() {
-	var sizeInput = prompt("How big do you want it?", gridSize);
-
-	if (sizeInput >= 1 && sizeInput <= 100) {
-		$("#board > table").remove();
-		createGrid(sizeInput);
-	} else if (sizeInput > 100) {
-		alert("Stahp, it hurts...");
-	} else if (isNaN(sizeInput)) {
-		alert("Error: Input is not a number.");
-	};
-}*/
-
 //---------------------------------------------------------SLIDER
 
 function scaleSlider() {
@@ -56,95 +42,115 @@ function drawCheck() {
 	switch (drawOn) {
 		case "white": 
 			$("td").on("mouseenter", function(){
+				$(this).removeAttr("style");
 				$(this).addClass("whitechalk");
 			});
-			$("span").removeClass();
-			$("span").html("white");
-			$("span").addClass("activewhite");
+			$("section").removeClass();
+			$("section").html("white");
+			$("section").addClass("activewhite");
 			break;
 
 		case "red":
 			$("td").on("mouseenter", function(){
+				$(this).removeAttr("style");
 				$(this).addClass("redchalk");
 			});
-			$("span").removeClass();
-			$("span").html("red");
-			$("span").addClass("activered");
+			$("section").removeClass();
+			$("section").html("red");
+			$("section").addClass("activered");
 			break;
 
 		case "orange":
 			$("td").on("mouseenter", function(){
+				$(this).removeAttr("style");
 				$(this).addClass("orangechalk");
 			});
-			$("span").removeClass();
-			$("span").html("orange");
-			$("span").addClass("activeorange");
+			$("section").removeClass();
+			$("section").html("orange");
+			$("section").addClass("activeorange");
 			break;
 
 		case "yellow":
 			$("td").on("mouseenter", function(){
+				$(this).removeAttr("style");
 				$(this).addClass("yellowchalk");
 			});
-			$("span").removeClass();
-			$("span").html("yellow");
-			$("span").addClass("activeyellow");
+			$("section").removeClass();
+			$("section").html("yellow");
+			$("section").addClass("activeyellow");
 			break;
 
 		case "green":
 			$("td").on("mouseenter", function(){
+				$(this).removeAttr("style");
 				$(this).addClass("greenchalk");
 			});
-			$("span").removeClass();
-			$("span").html("green");
-			$("span").addClass("activegreen");
+			$("section").removeClass();
+			$("section").html("green");
+			$("section").addClass("activegreen");
 			break;
 
 		case "blue":
 			$("td").on("mouseenter", function(){
+				$(this).removeAttr("style");
 				$(this).addClass("bluechalk");
 			});
-			$("span").removeClass();
-			$("span").html("blue");
-			$("span").addClass("activeblue");
+			$("section").removeClass();
+			$("section").html("blue");
+			$("section").addClass("activeblue");
 			break;
 
 		case "purple":
 			$("td").on("mouseenter", function(){
+				$(this).removeAttr("style");
 				$(this).addClass("purplechalk");
 			});
-			$("span").removeClass();
-			$("span").html("purple");
-			$("span").addClass("activepurple");
+			$("section").removeClass();
+			$("section").html("purple");
+			$("section").addClass("activepurple");
 			break;
 
 		case "rainbow":
 			$("td").on("mouseenter", function(){
-				$(this).css("background-color", rainbow());
+				$(this).removeAttr("style");
+				$(this).css("background-color", rainbowGen());
+				$(this).addClass("rainbowchalk");
 			});
-			$("span").removeClass();
-			$("span").html("rainbow");
-			$("span").addClass("activerainbow");
+			$("section").removeClass();
+			$("section").html("rainbow");
+			$("section").addClass("activerainbow");
 			break;
 
 		default:
 			$("td").on("mouseenter", function(){
 				$(this).removeClass();
+				$(this).removeAttr("style");
 			});
-			$("span").removeClass();
-			$("span").html("eraser");
-			$("span").addClass("activeeraser");
+			$("section").removeClass();
+			$("section").html("eraser");
+			$("section").addClass("activeeraser");
 	}
 }
 
+//--------------------------------------------------RAINBOW TEXT
+
+/*function rainbowText(){
+	var rainbow = "rainbow";
+	var chalk = ["redchalk", "orangechalk", "yellowchalk", "greenchalk", "bluechalk", "purplechalk", "whitechalk"];
+
+	for(var i = 0; i < rainbow.length; i++){
+		$("rainbow["i"]").addClass("chalk["i"]");
+	};
+}*/
+
 //----------------------------------------RANDOM COLOR GENERATOR
 
-function rainbow(){
+function rainbowGen(){
 	var randomR = Math.floor(Math.random()*255);
 	var randomG = Math.floor(Math.random()*255);
 	var randomB = Math.floor(Math.random()*255);
-	var randomA = Math.round(Math.random() * 100) / 100;
 
-	return("rgba("+randomR+", "+randomG+", "+randomB+", "+randomA+")");
+	return("rgba("+randomR+", "+randomG+", "+randomB+")");
 }
 
 //----------------------------------------------------DRAW CLEAR
@@ -165,13 +171,9 @@ $(document).ready(function(){
 
 	drawCheck();
 	
-	/*$("#scale").on("click", function(){
-		changeGrid();
-		drawCheck();
-	});*/
-
 	$("#clear").on("click", function(){
 		$("td").removeClass();
+		$("td").removeAttr("style");
 		drawCheck();
 	});
 

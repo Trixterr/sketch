@@ -14,7 +14,7 @@ body {
 	background-repeat: no-repeat;
 }
 
-.top, .empty, .tools, .active, span {
+.top, .empty, .tools, .active {
 	margin: 0 auto;
 	width: 540px;
 }
@@ -117,7 +117,7 @@ td {
 }
 
 #drawrainbow {
-	background: linear-gradient(to right, #f22c2c, #f90, #e1e100, #00d200, #0097d2, #ad44db, #ff7eeb);
+	background: linear-gradient(to right, #f22c2c, #f90, #e1e100, #00d200, #28b6ed, #ad44db);
 	border: 1px solid #555;
 	border-bottom: 5px solid rgba(41, 41, 41, 0.3);
 }
@@ -183,9 +183,16 @@ td {
 	height: 30px;
 }
 
-span {
+section {
+	margin-left: 235px;
+	margin-right: 235px;
+	width: 70px;
 	position: absolute;
 	text-align: center;
+}
+
+.display {
+	display: static;
 }
 
 .activerainbow {
@@ -231,8 +238,7 @@ span {
 }
 
 .rainbowchalk {
-	border-right: 1px solid rgba(0, 0, 0, 0.50);
-	border-bottom: 1px solid rgba(0, 0, 0, 0.50);
+	border: none;
 }
 
 .redchalk {

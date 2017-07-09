@@ -6,7 +6,7 @@ From The Odin Project's [curriculum](https://www.theodinproject.com/courses/web-
 - [x] Make a div creating script for pad
 - [x] Create functional tools 
 - [x] Add more colors
-- [x] Add working rainbow tool
+- [] Add working rainbow tool
 - [x] Replace labels with active tool indicator
 - [x] Replace scale button with jQuery UI slider
 - [] Change hover to click ><
