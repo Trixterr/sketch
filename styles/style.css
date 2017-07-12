@@ -9,14 +9,12 @@
 body {
 	margin: 0;
 	padding: 0;
-	background-image: url("../images/turtle.gif");
-	background-position: right bottom;
-	background-repeat: no-repeat;
+	background: no-repeat right bottom url("../images/turtle.gif");
 }
 
-.top, .empty, .tools, .active {
+.top, .empty, .tools, .active, h1 {
 	margin: 0 auto;
-	width: 540px;
+	width: 530px;
 }
 
 /*--------------------------------------------------------MAIN--*/
@@ -33,8 +31,10 @@ body {
 }
 
 #border {
+	height: 591px;
+	width: 591px;
 	margin: 12px 10px;
-	border: 33px solid #8c4f13;
+	background: linear-gradient(135deg, #925d29, #633200);
 	border-radius: 20px;
 	box-shadow: 4px 4px 3px #111;
 }
@@ -42,7 +42,7 @@ body {
 #board {
 	margin: 45px 0 0 43px;
 	background-color: #032A07;
-	box-shadow: -3px -3px 10px #332912, 3px 3px 10px #b08f1e;
+	box-shadow: -3px -3px 20px #332912, 3px 3px 20px #b08f1e;
 }
 
 table {
@@ -61,18 +61,23 @@ td {
 }
 
 #clear {
-	margin-top: 14px;
+	margin: 14px -5px 0 0;
 	position: sticky;
 	background-color: transparent;
 	border: none;
 	float: right;
 }
 
+h1 {
+	text-align: center;
+	position: absolute;
+	margin-top: 14px;
+}
 
 /*---------------------------------------------------------SLIDER--*/
 
 #scaleSlider {
-	margin: 28px 0 0 7px;
+	margin-top: 28px;
 	height: 3px;
 	width: 462px;
 	background-color: #4A2A03;
@@ -108,127 +113,128 @@ td {
 
 #drawrainbow, #drawred, #draworange, #drawyellow, #drawgreen, #drawblue, #drawpurple, #drawwhite {
 	border-radius: 3px;
-	box-shadow: 0 1px 3px black;
+	box-shadow: 0 2px 3px black;
 	margin: 17px 2px 0 0;
-	float: right;
+	float: left;
 	width: 55px;
 	height: 11px;
 	position: sticky;
 }
 
 #drawrainbow {
-	background: linear-gradient(to right, #f22c2c, #f90, #e1e100, #00d200, #28b6ed, #ad44db);
+	background: linear-gradient(to right, #f64a4a, #ffb225, #f2f238, #5eff5e, #41d0ff, #d26bff);
 	border: 1px solid #555;
-	border-bottom: 5px solid rgba(41, 41, 41, 0.3);
+	border-top: 4.5px solid rgba(0, 0, 0, 0.15);
+	border-bottom: 4.5px solid rgba(0, 0, 0, 0.15);
 }
 
 #drawred {
-	background-color: #f64a4a;
+	background: linear-gradient(#f64a4a, #ff8383, #f64a4a);
 	border: 1px solid #e73434;
-	border-bottom: 5px solid #f22c2c;
 }
 
 #draworange {
-	background-color: #ffb225;
+	background: linear-gradient(#ffb225, #ffcf87, #ffb225);
 	border: 1px solid #e7a938;
-	border-bottom: 5px solid #f90;
 }
 
 #drawyellow {
-	background-color: #ffff5c;
+	background: linear-gradient(#f2f238, #ffffab, #f2f238);
 	border: 1px solid #ffff20;
-	border-bottom: 5px solid #e1e100;
 }
 
 #drawgreen {
-	background-color: #5eff5e;
+	background: linear-gradient(#5eff5e, #d2ffd2, #5eff5e);
 	border: 1px solid #28bf28;
-	border-bottom: 5px solid #00d200;
 }
 
 #drawblue {
-	background-color: #41d0ff;
+	background: linear-gradient(#41d0ff, #b4eaff, #41d0ff);
 	border: 1px solid #29b6bc;
-	border-bottom: 5px solid #0097d2;
 }
 
 #drawpurple {
-	background-color: #d26bff;
+	background: linear-gradient(#d26bff, #e29fff, #d26bff);
 	border: 1px solid #b60eff;
-	border-bottom: 5px solid #ad44db;
 }
 
 #drawwhite {
-	background-color: #fafafa;
+	background: linear-gradient(#d0d0d0, #fff, #d0d0d0);
 	border: 1px solid #ddd;
-	border-bottom: 5px solid #bbb;
+}
+
+.eraser {
+	height: 27px;
+	width: 68px;
+	margin-right: 5px;
+	background: repeating-linear-gradient(to right, #222 10%, #333 20%);
+	border-bottom: 2px solid #0a0a0a;
+	border-radius: 3px;
+	box-shadow: 0 2px 3px black;
+	position: sticky;
+	float: right;
 }
 
 #erase {
-	margin-right: 8px;
-	background-color: #B77E33;
-	border: 1px solid #4A2A03;
-	border-bottom: 10px solid #936328;
-	border-radius: 3px;
-	box-shadow: 0 10px 3px black;
-	float: right;
 	width: 70px;
 	height: 20px;
-	position: sticky;
+	margin-right: -1px;
+	background: linear-gradient(#B77E33 60%, #633D0E 60%, #99611F 65%);
+	border: 1px solid #4A2A03;
+	border-radius: 3px;
+	box-shadow: 0 1px 1px black;
+	float: right;
 }
 
 /*---------------------------------------------------------ACTIVE--*/
 
 .active {
-	height: 30px;
+	height: 20px;
 }
 
 section {
-	margin-left: 235px;
-	margin-right: 235px;
-	width: 70px;
-	position: absolute;
-	text-align: center;
-}
-
-.display {
-	display: static;
+	height: 10px;
+	width: 100px;
+	position: sticky;
+	border-radius: 5px;
+	margin: 10px auto 0 auto;
+	box-shadow: 3px 0 #603E11, 0 3px #4A2D08, -3px 0 #AB7E12, 0 -3px #937318;
 }
 
 .activerainbow {
-	
+	background: linear-gradient(135deg, #f84646 9%, #ffb836 30%, #ffff5c 45%, #45ff45, #81a2ff 70%, #ff6cff 100%);
 }
 
 .activered {
-	color: #f64a4a;
+	background: linear-gradient(170deg, #ff7b7b, #ff4820, #f80000);
 }
 
 .activeorange {
-	color: #ffb225;
+	background: linear-gradient(170deg, #ffbc41, #ffab12, #f29c00);
 }
 
 .activeyellow {
-	color: #ffff5c;
+	background: linear-gradient(170deg, #ffff94, #ffff35, #e3e300);
 }
 
 .activegreen {
-	color: #5eff5e;
+	background: linear-gradient(170deg, #b7ffb7, #12ff12, #009f00);
 }
 
 .activeblue {
-	color: #41d0ff;
+	background: linear-gradient(170deg, #a9e3ff, #23b9ff, #006a9c);
 }
 
 .activepurple {
-	color: #d26bff;
+	background: linear-gradient(170deg, #ffb4ff, #b65ab6, #933893);
 }
 
 .activewhite {
-	color: #fafafa;
+	background: linear-gradient(170deg, #fafafa, #dadada, #bababa);
 }
 
 .activeeraser {
-	color: #4A2A03;
+	background: linear-gradient(170deg, #B77E33, #936328, #754100);
 }
 
 /*---------------------------------------------JAVASCRIPT CLASSES--*/

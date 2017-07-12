@@ -1,5 +1,6 @@
 var gridSize = 20;
 var drawOn = "white";
+var active = "activewhite activered activeorange activeyellow activegreen activeblue activepurple activerainbow"
 
 //--------------------------------------------------GRID CREATION
 
@@ -45,9 +46,8 @@ function drawCheck() {
 				$(this).removeAttr("style");
 				$(this).addClass("whitechalk");
 			});
-			$("section").removeClass();
-			$("section").html("white");
-			$("section").addClass("activewhite");
+			$("#scaleSlider").removeClass(active);
+			$("#scaleSlider").addClass("activewhite");
 			break;
 
 		case "red":
@@ -55,9 +55,8 @@ function drawCheck() {
 				$(this).removeAttr("style");
 				$(this).addClass("redchalk");
 			});
-			$("section").removeClass();
-			$("section").html("red");
-			$("section").addClass("activered");
+			$("#scaleSlider").removeClass(active);
+			$("#scaleSlider").addClass("activered");
 			break;
 
 		case "orange":
@@ -65,9 +64,8 @@ function drawCheck() {
 				$(this).removeAttr("style");
 				$(this).addClass("orangechalk");
 			});
-			$("section").removeClass();
-			$("section").html("orange");
-			$("section").addClass("activeorange");
+			$("#scaleSlider").removeClass(active);
+			$("#scaleSlider").addClass("activeorange");
 			break;
 
 		case "yellow":
@@ -75,9 +73,8 @@ function drawCheck() {
 				$(this).removeAttr("style");
 				$(this).addClass("yellowchalk");
 			});
-			$("section").removeClass();
-			$("section").html("yellow");
-			$("section").addClass("activeyellow");
+			$("#scaleSlider").removeClass(active);
+			$("#scaleSlider").addClass("activeyellow");
 			break;
 
 		case "green":
@@ -85,9 +82,8 @@ function drawCheck() {
 				$(this).removeAttr("style");
 				$(this).addClass("greenchalk");
 			});
-			$("section").removeClass();
-			$("section").html("green");
-			$("section").addClass("activegreen");
+			$("#scaleSlider").removeClass(active);
+			$("#scaleSlider").addClass("activegreen");
 			break;
 
 		case "blue":
@@ -95,9 +91,8 @@ function drawCheck() {
 				$(this).removeAttr("style");
 				$(this).addClass("bluechalk");
 			});
-			$("section").removeClass();
-			$("section").html("blue");
-			$("section").addClass("activeblue");
+			$("#scaleSlider").removeClass(active);
+			$("#scaleSlider").addClass("activeblue");
 			break;
 
 		case "purple":
@@ -105,9 +100,8 @@ function drawCheck() {
 				$(this).removeAttr("style");
 				$(this).addClass("purplechalk");
 			});
-			$("section").removeClass();
-			$("section").html("purple");
-			$("section").addClass("activepurple");
+			$("#scaleSlider").removeClass(active);
+			$("#scaleSlider").addClass("activepurple");
 			break;
 
 		case "rainbow":
@@ -116,9 +110,8 @@ function drawCheck() {
 				$(this).css("background-color", rainbowGen());
 				$(this).addClass("rainbowchalk");
 			});
-			$("section").removeClass();
-			$("section").html("rainbow");
-			$("section").addClass("activerainbow");
+			$("#scaleSlider").removeClass(active);
+			$("#scaleSlider").addClass("activerainbow");
 			break;
 
 		default:
@@ -126,9 +119,7 @@ function drawCheck() {
 				$(this).removeClass();
 				$(this).removeAttr("style");
 			});
-			$("section").removeClass();
-			$("section").html("eraser");
-			$("section").addClass("activeeraser");
+			$("#scaleSlider").removeClass(active);
 	}
 }
 
